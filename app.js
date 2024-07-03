@@ -30,6 +30,10 @@ app.post("/upload", upload.single("file"), (req, res) => {
   res.send("File uploaded successfully");
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+}
+);
 // Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
